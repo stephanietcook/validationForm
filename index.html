@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="css/validation.css">
+</head>
+
+<body>
+
+    <form name="taskForm" action="" id="myForm">
+
+        <div class="item">
+            <label for="newTask">New Task</label><br>
+            <input type="text" id="newTask" name="newTask" class="form-field" onchange="myValidation()" value=""
+                required><br>
+            <p id="newTaskError" style="display: none;">Please make sure your task contains no HTML characters html</p>
+        </div>
+
+        <div class="item">
+            <label for="taskDescription">Task Description</label><br>
+            <textarea name="taskDescription" id="taskDescription" cols="30" rows="10" class="form-field"></textarea><br>
+        </div>
+
+
+        <div class="item">
+            <label for="taskDD">Task Due Date</label><br>
+            <input type="date" name="taskDD" id="taskDD" class="form-field"><br>
+        </div>
+
+        <div class="item">
+            <label for="taskDT">Task Due Time</label><br>
+            <input type="time" name="taskDT" id="taskDT" class="form-field"><br>
+        </div>
+
+        <input class="submit" id="submit" type="submit">
+        </input>
+
+    </form>
+
+    <ul id="taskList">
+
+    </ul>
+
+
+
+    <script src="js/validation.js"></script>
+</body>
+
+</html>
